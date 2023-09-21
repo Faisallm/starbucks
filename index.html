@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section>
+        <div class="circle">
+
+        </div>
+
+        <!-- this the header section of the app -->
+        <header>
+            <!-- logo -->
+            <a href=""><img src="assets/logo.png" class="logo"></a>
+            <!-- list of icons -->
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+        </header>
+
+        <div class="content">
+            <!-- text box -->
+            <div class="textBox">
+                <h2>It's not just Coffee <br> It's <span>Starbucks</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo omnis nesciunt eligendi vitae beatae dolores doloremque, quibusdam, doloribus velit labore, sint officiis asperiores repellendus officia tenetur odit amet. Ad, quia.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <!-- image box -->
+            <div class="imgBox">
+                <img src="assets/img1.png" class="starbucks">
+            </div>
+        </div>
+
+        <ul class="thumb">
+            <li><img src="assets/thumb1.png" onclick="imgSlider('assets/img1.png'); changeCircleColor('#107143')"></li>
+            <li><img src="assets/thumb2.png" onclick="imgSlider('assets/img2.png'); changeCircleColor('#eb7495')"></li>
+            <li><img src="assets/thumb3.png" onclick="imgSlider('assets/img3.png'); changeCircleColor('#d752b1')"></li>
+        </ul>
+
+        <ul class="sci">
+            <li>
+                <a href="#"><img src="assets/facebook.png"></a>
+            </li>
+            <li>
+                <a href="#"><img src="assets/twitter.png"></a>
+            </li>
+            <li>
+                <a href="#"><img src="assets/instagram.png"></a>
+            </li>
+        </ul>
+
+
+    </section>
+
+
+    <script>
+        function imgSlider(anyImg) {
+            document.querySelector('.starbucks').src = anyImg;
+        }
+
+        function changeCircleColor(color) {
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+    </script>
+</body>
+
+</html>
